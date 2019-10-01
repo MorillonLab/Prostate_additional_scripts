@@ -20,7 +20,7 @@ annot_list=("/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_gene_
             "/home/marcgabriel/Documents/Marina_P/kmers_annotations/kmers_unmapped.gff")
             
 
-#associated names (order respected)
+#names associated to the annotations (order respected)
 prefix=("gencode"
         "MiTranscriptome_lncRNAs"
         "holdUP_all_class1"
