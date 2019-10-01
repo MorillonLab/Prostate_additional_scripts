@@ -5,7 +5,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 ## 1) Differential expression (gencode27lift37 + holdUP annotation) ##
 
 
-- Design :
+- 1-a) Design :
 
 |condition| sample name |
 |--------  |-------------|
@@ -38,7 +38,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 - remark : the fastq files can be found in the GEO accession of the paper, as well as the instructions for the alignment !
 ```
 
- - Get counts (gencode annoation + holdUP) : 
+ - 1-b) Get counts (gencode annoation + holdUP) : 
  
    - script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/prostate_counting.sh
    
@@ -49,7 +49,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    ```
    
    
- - Comparison of conditions "normal" vs "tumoral" : 
+ - 1-c) Comparison of conditions "normal" vs "tumoral" : 
  
    - script : https://github.com/MorillonLab/Prostate_additional_scripts/tree/master/DESeq2_prostate24
    
