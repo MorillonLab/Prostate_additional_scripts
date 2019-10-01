@@ -41,7 +41,10 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    
    - link for gencode annotation (variable "gff_gtf_ForCounting" in the script) : ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/GRCh37_mapping/gencode.v27lift37.annotation.gff3.gz
    
-   -> The counts can also be found in the GEO accession of the paper
+   ```diff
+   - The counts can also be found in the GEO accession of the paper
+   ```
+   
    
  - Comparison of conditions "normal" vs "tumoral" : 
    - script :
