@@ -69,3 +69,11 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
   - 2-a) script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/getRecursiveIntersections.sh
   
       -> check the results in the table `all_intersections.tsv`
+   
+   ---
+   
+ ## 3) Unsupervised clustering of prostate specimens
+     
+   ---
+   
+   - 3-a) script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/getRecursiveIntersections.sh
