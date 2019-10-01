@@ -15,35 +15,35 @@ bam_dir="input/media/marcgabriel/SAMSUNG/24_prostate_files_CURIE/"
 orientation="-s 2"
 
 #correspondance gencode gene types & global gene types
-gene_type="/home/marcgabriel/Documents/gencode26/gene_types.tsv"
+gene_type=$(dirname "$0")/data/gene_types.tsv
 
 #featureCounts program
 featureCounts_prog="/home/marcgabriel/Desktop/subread-1.6.0-source_MAX_HIT_NUMBER_10e6/bin/featureCounts"
 
-
 #bedtools 
 bedtools="bedtools"
-
-#home-made annotation (from holdUp)
-
-#class 1
-init_holdupProstate1_class1w=$(dirname "$0")/data/contigs_sans_sens.anti.class1.quantile.0.2.gtf
-
-init_holdupProstate2_class1w=$(dirname "$0")/contigs_sans_sens.inter.class1.quantile.0.2.gtf
-
-#class 3
-init_holdupProstate1_class3w=$(dirname "$0")/contigs_sans_sens.anti.class3.quantile.0.2.gtf
-
-init_holdupProstate2_class3w=$(dirname "$0")/contigs_sans_sens.inter.class3.quantile.0.2.gtf
-
-#number of thread for featureCount
-threads=8
 
 #path to samtools program
 samtools="samtools"
 
 #path to featureCounts output (output dir)
 featureCounts_outputs="/home/marcgabriel/Documents/Marina_P/data_intersections/"
+
+#number of threads for featureCount
+threads=8
+
+#home-made annotation (from holdUp)
+
+#class 1 holdUP annotation
+init_holdupProstate1_class1w=$(dirname "$0")/data/contigs_sans_sens.anti.class1.quantile.0.2.gtf
+
+init_holdupProstate2_class1w=$(dirname "$0")/contigs_sans_sens.inter.class1.quantile.0.2.gtf
+
+#class 3 holdUP annotation
+init_holdupProstate1_class3w=$(dirname "$0")/contigs_sans_sens.anti.class3.quantile.0.2.gtf
+
+init_holdupProstate2_class3w=$(dirname "$0")/contigs_sans_sens.inter.class3.quantile.0.2.gtf
+
 
 ####################
 
