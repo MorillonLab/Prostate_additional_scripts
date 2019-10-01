@@ -5,7 +5,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 ## Differential expression (gencode27lift37 + holdUP annotation) ##
 
 
-- Design (the Fastq files can be found in the GEO accession of the paper, as well as the instructions for the alignment) :
+- Design :
 
 |condition| sample name |
 |--------  |-------------|
@@ -34,6 +34,9 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 |normal			|		B67T14|
 |normal				|	B67T15|
 
+```diff
+- remark : the Fastq files can be found in the GEO accession of the paper, as well as the instructions for the alignment !
+```
 
  - Get counts (gencode annoation + holdUP) : 
  
