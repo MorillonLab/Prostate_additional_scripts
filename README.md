@@ -50,4 +50,8 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    
    
  - Comparison of conditions "normal" vs "tumoral" : 
-   - script :
+ 
+   - script : https://github.com/MorillonLab/Prostate_additional_scripts/tree/master/DESeq2_prostate24
+   
+        - This directory contains the script `DESeq2_script.R` and its readme `README.txt`
+   
