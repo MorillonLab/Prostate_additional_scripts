@@ -58,7 +58,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    
         - This directory contains the script `DESeq2_script.R` and its readme `README.txt`
         
-  - How to use it : `README.txt`, or in a terminal, type : ./DESeq2_script.R to see the usage
+   - How to use it : `README.txt`, or in a terminal, type : ./DESeq2_script.R to see the usage
    
    ---
    
