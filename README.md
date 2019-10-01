@@ -1,8 +1,11 @@
 # Prostate_additional_scripts
 Additional scripts used for the prostate paper "Blind exploration of the unreferenced transcriptome reveals novel RNAs for prostate cancer diagnosis"
 
+---
 
 ## 1) Differential expression (gencode27lift37 + holdUP annotation) ##
+
+---
 
 
 - 1-a) Design :
@@ -54,6 +57,11 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    - script : https://github.com/MorillonLab/Prostate_additional_scripts/tree/master/DESeq2_prostate24
    
         - This directory contains the script `DESeq2_script.R` and its readme `README.txt`
+        
+  - How to use it : `README.txt`, or in a terminal, type : ./DESeq2_script.R to see the usage
    
+   ---
    
    ## 2) Overlap between GENCODE, MiTranscriptome, DE-kupl and HoLdUp catalogues ##
+   
+   ---
