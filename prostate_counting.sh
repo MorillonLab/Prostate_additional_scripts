@@ -1,10 +1,17 @@
 #!/bin/bash
 
 
+##### input data ########
+
+
 #annotation
 gff_gtf_ForCounting="/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_sorted.gff3"
 
-#it works like hseq-count : 1 -> read 1 is in the same strand as the RNA ; 2 -> read 1 is antisense to the RNA
+
+#dir of bam files
+bam_dir="input/media/marcgabriel/SAMSUNG/24_prostate_files_CURIE/"
+
+#reads orientation for featureCounts : it works like hseq-count : 1 -> read 1 is in the same strand as the RNA ; 2 -> read 1 is antisense to the RNA
 orientation="-s 2"
 
 #correspondance gencode gene types & global gene types
@@ -20,22 +27,25 @@ bedtools="bedtools"
 #home-made annotation (from holdUp)
 
 #class 1
-init_holdupProstate1_class1w="/home/marcgabriel/Documents/Marina_P/lncRNA_gtf_HoLDuP_run_10/contigs_sans_sens.anti.class1.quantile.0.2.gtf"
+init_holdupProstate1_class1w=$(dirname "$0")/data/contigs_sans_sens.anti.class1.quantile.0.2.gtf
 
-init_holdupProstate2_class1w="/home/marcgabriel/Documents/Marina_P/lncRNA_gtf_HoLDuP_run_10/contigs_sans_sens.inter.class1.quantile.0.2.gtf"
+init_holdupProstate2_class1w=$(dirname "$0")/contigs_sans_sens.inter.class1.quantile.0.2.gtf
 
 #class 3
-init_holdupProstate1_class3w="/home/marcgabriel/Documents/Marina_P/lncRNA_gtf_HoLDuP_run_10/contigs_sans_sens.anti.class3.quantile.0.2.gtf"
+init_holdupProstate1_class3w=$(dirname "$0")/contigs_sans_sens.anti.class3.quantile.0.2.gtf
 
-init_holdupProstate2_class3w="/home/marcgabriel/Documents/Marina_P/lncRNA_gtf_HoLDuP_run_10/contigs_sans_sens.inter.class3.quantile.0.2.gtf"
+init_holdupProstate2_class3w=$(dirname "$0")/contigs_sans_sens.inter.class3.quantile.0.2.gtf
 
-
+#number of thread for featureCount
 threads=8
 
+#path to samtools program
 samtools="samtools"
 
-#path to featureCounts output
+#path to featureCounts output (output dir)
 featureCounts_outputs="/home/marcgabriel/Documents/Marina_P/data_intersections/"
+
+####################
 
 featureCounts_outputs="${featureCounts_outputs}/"
 featureCounts_outputs=$(echo $featureCounts_outputs |sed 's/\/\//\//g')
@@ -151,10 +161,10 @@ fi
 ##########################################
 
 #normal files
-normal_files=($(find "/media/marcgabriel/SAMSUNG/24_prostate_files_CURIE/" -name "*unique.bam"|grep -E "B65T2\.|B65T4\.|B65T6\.|B65T8\.|B67T10\.|B67T13\.|B67T14\.|B67T15\.")) || { echo "no files (normal) !!" 1>&2; exit; }
+normal_files=($(find $bam_dir -name "*unique.bam"|grep -E "B65T2\.|B65T4\.|B65T6\.|B65T8\.|B67T10\.|B67T13\.|B67T14\.|B67T15\.")) || { echo "no files (normal) !!" 1>&2; exit; }
 
 #tumoral files
-tumoral_files=($(find "/media/marcgabriel/SAMSUNG/24_prostate_files_CURIE/" -name "*unique.bam"|grep -E "B67T18\.|B67T19\.|B67T20\.|B67T22\.|B65T1\.|B65T3\.|B65T5\.|B65T7\.|B67T11\.|B67T17\.|B67T21\.|B67T12\.|B67T23\.|B67T24\.|B67T9\.|B67T16\.")) || { echo "no files (tumoral) !!" 1>&2; exit; }
+tumoral_files=($(find $bam_dir -name "*unique.bam"|grep -E "B67T18\.|B67T19\.|B67T20\.|B67T22\.|B65T1\.|B65T3\.|B65T5\.|B65T7\.|B67T11\.|B67T17\.|B67T21\.|B67T12\.|B67T23\.|B67T24\.|B67T9\.|B67T16\.")) || { echo "no files (tumoral) !!" 1>&2; exit; }
 
 echo -e "\nnb normal files : ${#normal_files[*]}"
   
