@@ -13,11 +13,21 @@ samtools="samtools"
 #list of annotations
 annot_list=("/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_gene_lvl.gff"
             "/home/marcgabriel/Documents/Marina_P/mitranscriptome.gtf/mitranscriptome.v2_lncRNAs_gffread.gff"
-            "/home/marcgabriel/Documents/Marina_P/data_intersections/holdup_prostate_class1w_only.gff")
+            "/home/marcgabriel/Documents/Marina_P/data_intersections/holdup_prostate_class1w_only.gff"
+	    "/home/marcgabriel/Documents/Marina_P/kmers_annotations/kmers_contiguous.gff"
+            "/home/marcgabriel/Documents/Marina_P/kmers_annotations/kmers_spliced.gff"
+            "/home/marcgabriel/Documents/Marina_P/kmers_annotations/kmers_repeat.gff"
+            "/home/marcgabriel/Documents/Marina_P/kmers_annotations/kmers_unmapped.gff")
             
 
 #associated names (order respected)
-prefix=("gencode" "MiTranscriptome_lncRNAs" "all_class1")
+prefix=("gencode"
+        "MiTranscriptome_lncRNAs"
+        "all_class1"
+        "dekupl_contigs_contiguous"
+        "dekupl_contigs_spliced"
+        "dekupl_contigs_repeat"
+        "dekupl_contigs_unmapped")
 
 #output directory            
 output_dir="/home/marcgabriel/Desktop/test4"
