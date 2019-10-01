@@ -5,6 +5,7 @@
 
 
 #annotation
+#can be found at ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/GRCh37_mapping/gencode.v27lift37.annotation.gff3.gz
 gff_gtf_ForCounting="/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_sorted.gff3"
 
 
