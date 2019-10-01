@@ -62,9 +62,9 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    
    ---
    
-   ## 2) Overlap between GENCODE, MiTranscriptome, DE-kupl and HoLdUp catalogues ##
+ ## 2) Overlap between GENCODE, MiTranscriptome, DE-kupl and HoLdUp catalogues ##
    
    ---
    
-  - 2-a) script : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/getRecursiveIntersections.sh
+  - 2-a) script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/getRecursiveIntersections.sh
    
