@@ -5,7 +5,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 ## Differential expression (gencode27lift37 + holdUP annotation) ##
 
 
-Design :
+- Design :
 
 |condition| sample name |
 |--------  |-------------|
