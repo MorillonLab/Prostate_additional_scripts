@@ -3,5 +3,9 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
 
 
 ## Differential expression (gencode27lift37 + holdUP annotation) ##
+
  - counts :
- link for gencode annotation : ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/GRCh37_mapping/gencode.v27lift37.annotation.gff3.gz
+ 
+   - script :
+   
+   - link for gencode annotation : ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/GRCh37_mapping/gencode.v27lift37.annotation.gff3.gz
