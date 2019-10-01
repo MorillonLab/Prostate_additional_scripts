@@ -33,6 +33,14 @@ featureCounts_outputs="/home/marcgabriel/Documents/Marina_P/data_intersections/"
 #number of threads for featureCount
 threads=8
 
+####################
+
+featureCounts_outputs="${featureCounts_outputs}/"
+featureCounts_outputs=$(echo $featureCounts_outputs |sed 's/\/\//\//g')
+
+if [ ! -d $featureCounts_outputs ]; then mkdir -p $featureCounts_outputs; fi
+
+
 #home-made annotation (from holdUp)
 
 #class 1 holdUP annotation
@@ -44,14 +52,6 @@ init_holdupProstate2_class1w=$(dirname "$0")/contigs_sans_sens.inter.class1.quan
 init_holdupProstate1_class3w=$(dirname "$0")/contigs_sans_sens.anti.class3.quantile.0.2.gtf
 
 init_holdupProstate2_class3w=$(dirname "$0")/contigs_sans_sens.inter.class3.quantile.0.2.gtf
-
-
-####################
-
-featureCounts_outputs="${featureCounts_outputs}/"
-featureCounts_outputs=$(echo $featureCounts_outputs |sed 's/\/\//\//g')
-
-if [ ! -d $featureCounts_outputs ]; then mkdir -p $featureCounts_outputs; fi
 
 
 
