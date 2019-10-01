@@ -23,7 +23,7 @@ annot_list=("/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_gene_
 #associated names (order respected)
 prefix=("gencode"
         "MiTranscriptome_lncRNAs"
-        "all_class1"
+        "holdUP_all_class1"
         "dekupl_contigs_contiguous"
         "dekupl_contigs_spliced"
         "dekupl_contigs_repeat"
