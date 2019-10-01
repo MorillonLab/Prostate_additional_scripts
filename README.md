@@ -76,4 +76,4 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
      
    ---
    
-   - 3-a) script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/getRecursiveIntersections.sh
+   - 3-a) script (adapt the "input data" part) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/dekupl_heatmap_venn.R
