@@ -16,12 +16,6 @@ suppressMessages(library(Biostrings))
 
 home<-"/home/marcgabriel/Documents/Marina_P/"
 
-features_summary<-"/home/marcgabriel/Documents/test_results/feature_size.tsv"
-
-features_summary<-read.delim(file=features_summary,sep = "\t",check.names = F,header=F)
-
-names(features_summary)<-c("feature","length")
-
 complete_table<-"/home/marcgabriel/Documents/Marina_P/DiffContigsInfos.tsv"
 
 complete_table<-read.delim(file=complete_table,sep = "\t",check.names = F,header=T)
@@ -135,16 +129,9 @@ hc<-rowAnnotation(link = row_anno_link(at = subset, labels = labels),
   hm_list<-ht1+hc
   draw(hm_list, heatmap_legend_side = "right",row_title=paste(nrow(my_matrix)," Dekupl contigs",sep=""),annotation_legend_side = "bottom")
 
-  
-  # decorate_heatmap_body("log10(normalized expression)", {
-  #   i = which(colnames(my_matrix) == "normal_8")
-  #   x = i/ncol(my_matrix)
-  #   grid.lines(c(x, x), c(0, 1), gp = gpar(lwd = 1))
-  # })
-
-
 #dev.off()
 
+#matrix for just the selected contigs/probes
 my_matrix<-my_matrix[which(row.names(my_matrix)%in%probes),]
 
 ht1 = Heatmap(my_matrix, col=colorRamp2(c(seq(min(my_matrix), 1, len=5),1.5,2,2.5,3),my_palette),
@@ -164,7 +151,9 @@ ht1 = Heatmap(my_matrix, col=colorRamp2(c(seq(min(my_matrix), 1, len=5),1.5,2,2.
 
 
 hm_list<-ht1
+
 png(filename=paste(home,"heatmap_",nrow(my_matrix),"_dekupl_contigs_expression.png",sep=""),width=800,height=1000)
+
 draw(hm_list, heatmap_legend_side = "right",row_title=paste(nrow(my_matrix)," Dekupl contigs",sep=""),annotation_legend_side = "bottom")
 dev.off()
 
@@ -222,46 +211,4 @@ png(filename=paste(home,"piechart_dekupl_contigs_distribution.png",sep=""),width
       main=paste("Dekupl contigs distribution across genomic features\nTotal contigs = ",format(nrow(subset_table),big.mark=" "),"\nAllocation priority : UTR > exonic > intronic > antisense > intergenic",sep=""))
 
 dev.off()
-
-#nb_exonic_contigs_norm<-(nb_exonic_contigs/as.numeric(as.character(features_summary[which(features_summary$feature=="exon"),"length"])))*1000
-
-#nb_intronic_contigs_norm<-(nb_intronic_contigs/as.numeric(as.character(features_summary[which(features_summary$feature=="intron"),"length"])))*1000
-
-#nb_UTR_contigs_norm<-(nb_UTR_contigs/(as.numeric(as.character(features_summary[which(features_summary$feature=="five_prime_utr"),"length"]))+as.numeric(as.character(features_summary[which(features_summary$feature=="three_prime_utr"),"length"]))))*1000
-
-#nb_intergenic_contigs_norm<-(nb_intergenic_contigs/as.numeric(as.character(features_summary[which(features_summary$feature=="intergenic"),"length"])))*1000
-
-#total=nb_exonic_contigs_norm+nb_intronic_contigs_norm+nb_UTR_contigs_norm+nb_intergenic_contigs_norm
-
-
-#nb_exonic_norm_percent<-round((nb_exonic_contigs_norm/total)*100,2)
-
-#nb_intronic_norm_percent<-round((nb_intronic_contigs_norm/total)*100,2)
-
-#nb_UTR_norm_percent<-round((nb_UTR_contigs_norm/total)*100,2)
-
-#nb_intergenic_norm_percent<-round((nb_intergenic_contigs_norm/total)*100,2)
-
-#contigs_classification_norm<-data.frame(features=c(paste("exonic\n",nb_exonic_norm_percent,"%",sep=""),
-#                                              paste("intronic\n",nb_intronic_norm_percent,"%",sep=""),
-#                                              paste("UTR\n",nb_UTR_norm_percent,"%",sep=""),
-#                                              paste("intergenic\n",nb_intergenic_norm_percent,"%",sep="")),
-#                                   values=c(nb_exonic_norm_percent,
-#                                            nb_intronic_norm_percent,
-#                                            nb_UTR_norm_percent,
-#                                            nb_intergenic_norm_percent),
-#                                   color=c("cornflowerblue","red","purple","grey60"))
-
-
-
-
-
-#png(filename=paste(home,"piechart_dekupl_contigs_distribution_normalized.png",sep=""),width=1000,height=800)
-
-#pie(contigs_classification_norm$values,contigs_classification_norm$features,col=as.character(contigs_classification_norm$color),
-#    main=paste("Percentage of Dekupl contigs per kb of feature",sep=""))
-
-#dev.off()
-
-
 
