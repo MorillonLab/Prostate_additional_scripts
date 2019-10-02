@@ -11,6 +11,9 @@ samtools="samtools"
 
 
 #list of annotations
+#the annoation of the contigs (kmers_contiguous.gff, kmers_spliced.gff...) can be found in the directory data (https://github.com/MorillonLab/Prostate_additional_scripts/tree/master/data)
+#gencode annotation can be found here : ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/GRCh37_mapping/gencode.v27lift37.annotation.gff3.gz
+
 annot_list=("/home/marcgabriel/Documents/gencode27lift37/gencode.v27lift37_gene_lvl.gff"
             "/home/marcgabriel/Documents/Marina_P/mitranscriptome.gtf/mitranscriptome.v2_lncRNAs_gffread.gff"
             "/home/marcgabriel/Documents/Marina_P/data_intersections/holdup_prostate_class1w_only.gff"
