@@ -86,7 +86,7 @@ Additional scripts used for the prostate paper "Blind exploration of the unrefer
    
       -> initialize the vector `complete_table` with : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/data/DiffContigsInfos.tsv.zip
    
-      -> replace the gff files in the vector `dekupl_contigs` by :
+      -> replace the gff files in the vector `dekupl_contigs` by (uncompress it) : https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/data/DiffContigsInfos.tsv.zip
       
       - https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/data/kmers_contiguous.gff
       - https://github.com/MorillonLab/Prostate_additional_scripts/blob/master/data/kmers_repeat.gff
