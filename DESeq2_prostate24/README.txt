@@ -21,11 +21,12 @@
 				grid	
 				BiocParallel
 				data.table
+				pheatmap
 		
 		 -b) R packages from Bioconductor
 	  
 				 DESeq2
-				 pheatmap
+				 
 
 		 
 3) USAGE :
